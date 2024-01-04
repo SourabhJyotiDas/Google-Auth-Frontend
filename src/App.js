@@ -3,13 +3,22 @@ import Homepage from "./Components/Homepage";
 import Navbar from "./Components/Navbar";
 import Login from "./Components/Login";
 import Profile from "./Components/Profile.jsx";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { loadUser } from "./redux/actions/user.js";
 
 function App() {
 
   const { isAuthenticated, user, error, loading } = useSelector(
     (state) => state.user
   );
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadUser())
+  }, [dispatch])
+
 
   return (
     <>
