@@ -1,11 +1,9 @@
 import React from "react";
-import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../redux/actions/user";
 
 export default function Navbar() {
 
-  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handlelogout = async () => {

@@ -3,10 +3,11 @@ import Homepage from "./Components/Homepage";
 import Navbar from "./Components/Navbar";
 import Login from "./Components/Login";
 import Profile from "./Components/Profile.jsx";
+import { useSelector } from "react-redux";
 
 function App() {
 
-  const { isAuthenticated } = useSelector(
+  const { isAuthenticated, user, error, loading } = useSelector(
     (state) => state.user
   );
 
