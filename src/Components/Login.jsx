@@ -13,7 +13,7 @@ export default function Login() {
   let myServer = "http://localhost:5000/api/v1";
 
   const handleGoogle = () => {
-    window.open(`${myServer}/googlelogin`, "_self");
+    window.open(`${server}/googlelogin`, "_self");
   };
 
   return (
